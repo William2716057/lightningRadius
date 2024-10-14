@@ -34,8 +34,9 @@ document.addEventListener('keydown', (event) => {
             // Stop  timer
             const endTime = new Date();
             const elapsedTime = Math.round((endTime - startTime) / 1000); // convert to seconds
+            const distance = (elapsedTime / 3)
             timerActive = false;
-            document.getElementById('output').textContent = `Time between presses: ${elapsedTime} seconds`;
+            document.getElementById('output').textContent = `Strike approximately ${distance} kilometers away`;
             startTime = null; // Reset startTime 
         }
     } else if (!markerPlaced) {
